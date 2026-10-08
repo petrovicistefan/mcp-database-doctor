@@ -58,3 +58,5 @@ test('malformed child rejected',()=>assert.throws(()=>explainPlan({Plan:{'Node T
 test('aggregate',()=>{const r=healthReport({queries:['SELECT * FROM users'],migrations:['DROP TABLE users']});assert.equal(r.findings.length,2);assert.equal(r.analyzed.queries,1);});
 test('empty health rejected',()=>assert.throws(()=>healthReport({})));
 test('health batch cap',()=>assert.throws(()=>healthReport({queries:Array(101).fill('SELECT 1')})));
+
+test('unquoted names use PostgreSQL lowercase folding',()=>assert.equal(suggestIndexes('SELECT ID FROM Public.Users WHERE Email=$1').candidates[0].ddl,'CREATE INDEX CONCURRENTLY ON \"public\".\"users\" (\"email\");'));

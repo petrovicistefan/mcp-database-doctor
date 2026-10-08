@@ -58,9 +58,9 @@ export function suggestIndexes(sql:string, existingIndexes: {table:string; colum
  // Deliberately refuse ambiguous joins/subqueries/quoted names rather than guess table ownership.
  const tables=[...s.matchAll(/\b(?:from|join)\s+([a-z_][\w]*(?:\.[a-z_][\w]*)?)/gi)];
  if(tables.length!==1 || /\bjoin\b/i.test(s) || /Q{2}/.test(s) || statements(sql).length!==1) return {candidates,limitations:[...limitations,'Index inference supports one unquoted table and no joins/subqueries.']};
- const table=tables[0][1]; const where=s.match(/\bwhere\b([\s\S]*?)(?:\border\s+by\b|\bgroup\s+by\b|\blimit\b|$)/i)?.[1]??'';
+ const table=tables[0][1].toLowerCase(); const where=s.match(/\bwhere\b([\s\S]*?)(?:\border\s+by\b|\bgroup\s+by\b|\blimit\b|$)/i)?.[1]??'';
  const cols=[...where.matchAll(/(?:^|\band\b|\bor\b|\()\s*(?:[a-z_]\w*\.)?([a-z_]\w*)\s*(?:=|>=|<=|>|<|\bin\s*\()/gi)].map(m=>m[1]);
- for(const column of new Set(cols)) {
+ for(const column of new Set(cols.map(c=>c.toLowerCase()))) {
    if(existingIndexes.some(x=>x.table.toLowerCase()===table.toLowerCase()&&x.columns[0]?.toLowerCase()===column.toLowerCase()))continue;
    const quote=(x:string)=>'"'+x.replaceAll('"','""')+'"';
    candidates.push({table,column,ddl:`CREATE INDEX CONCURRENTLY ON ${table.split('.').map(quote).join('.')} (${quote(column)});`,reason:'Predicate column; candidate only. Validate selectivity, existing expression/partial indexes, write cost and EXPLAIN.'});

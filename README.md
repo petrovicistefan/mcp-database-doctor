@@ -81,7 +81,7 @@ Free: local query/migration/plan analysis. Pro later: history, before/after comp
 
 ## Validation status
 
-- 52 core tests passed in the implementation environment.
+- 53 core tests passed in the implementation environment.
 - Typecheck/build/MCP stdio integration: configured, not run locally (npm registry returned HTTP 403).
 - Real PostgreSQL and two actual AI hosts: pending; configuration files do not constitute host integration validation.
 
