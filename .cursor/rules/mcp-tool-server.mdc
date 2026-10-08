@@ -1,0 +1,28 @@
+---
+description: Conventions for local-first MCP tool servers in the product family
+globs: src/**/*.{js,ts,mjs},bin/**/*.{js,mjs},test/**/*.{js,ts}
+alwaysApply: false
+---
+
+# MCP Tool Server
+
+Local analysis over stdio. Not a hosted billable proxy unless explicitly building that path.
+
+## Stdio / JSON-RPC
+
+- Newline-delimited JSON-RPC 2.0 on stdin/stdout. Stdout is for protocol only (no logs).
+- Support `initialize`, `ping`, `tools/list`, `tools/call`. Require initialize before tools.
+- Negotiate protocol from supported set; default toward `2025-11-25`.
+- Cap message size; on `tools/call` return `content` text (usually JSON report) + `isError`.
+
+## Tools
+
+- `inputSchema`: object schemas with `additionalProperties: false` when practical.
+- Descriptions state limits (heuristic, not full validator; no live probes unless opt-in).
+- Core logic in a separate module (`guardian.js` / `doctor.js` / `core.js`) testable without MCP.
+
+## Packaging
+
+- `"type": "module"`. Prefer `node --test`. Keep useful path runnable from source with absolute path in client config.
+- Do not document `npx -y <pkg>` as working before publish + name ownership.
+- README: tools table, privacy, limitations, commercial boundary (free local / hosted Pro later).
