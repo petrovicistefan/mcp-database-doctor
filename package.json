@@ -4,10 +4,20 @@
   "description": "Offline PostgreSQL query, migration and EXPLAIN diagnostics for AI agents",
   "type": "module",
   "license": "MIT",
-  "bin": {"mcp-database-doctor": "dist/server.js"},
-  "exports": {".": "./dist/doctor.js"},
-  "files": ["dist", "README.md", "LICENSE"],
-  "engines": {"node": ">=22.18.0"},
+  "bin": {
+    "mcp-database-doctor": "dist/server.js"
+  },
+  "exports": {
+    ".": "./dist/doctor.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.18.0"
+  },
   "scripts": {
     "build": "tsc && node scripts/postbuild.mjs",
     "test": "node --test test/core.test.ts test/hosted.test.ts",
@@ -16,6 +26,30 @@
     "check": "tsc --noEmit",
     "prepublishOnly": "npm run check && npm test && npm run build && npm run test:integration"
   },
-  "dependencies": {"@modelcontextprotocol/sdk": "^1.26.0", "zod": "^3.25.0"},
-  "devDependencies": {"@types/node": "^22.0.0", "typescript": "^5.9.0", "vitest": "^3.2.0"}
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petrovicistefan/mcp-database-doctor.git"
+  },
+  "homepage": "https://github.com/petrovicistefan/mcp-database-doctor#readme",
+  "bugs": {
+    "url": "https://github.com/petrovicistefan/mcp-database-doctor/issues"
+  },
+  "author": "Stefan Petrovici",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sql",
+    "database",
+    "query-analysis",
+    "ai-agents"
+  ]
 }
