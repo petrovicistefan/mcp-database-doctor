@@ -75,9 +75,29 @@ For a real database, obtain plans yourself on a safe test environment: `EXPLAIN 
 - 100000 characters per SQL, 1 MB per plan string, 100 artifacts per report, 10000 plan nodes. These are analysis limits, not a substitute for host transport limits.
 - Findings are review prompts. Absence of a finding is not authorization to run a migration.
 
+## Hosted path (quotas via control plane)
+
+Local MCP stays free and offline. Quotas apply only on a hosted HTTP process that reserves units on mcp-control-plane before analysis. Build first (`npm run build`), then:
+
+```sh
+cp .env.example .env   # set CONTROL_PLANE_URL
+npm run start:hosted   # default 127.0.0.1:3103
+```
+
+| Method | Path | Body |
+| --- | --- | --- |
+| GET | `/health` | Liveness |
+| POST | `/v1/analyze-query` | `{ "requestId", "sql" }` |
+| POST | `/v1/check-migration` | `{ "requestId", "sql" }` |
+| POST | `/v1/suggest-indexes` | `{ "requestId", "sql", "existingIndexes"? }` |
+| POST | `/v1/explain-plan` | `{ "requestId", "plan" }` |
+| POST | `/v1/health-report` | `{ "requestId", "queries"?, "migrations"?, "plans"? }` |
+
+Requires `Authorization: Bearer mcp_…`. SQL and plans stay on the hosted host; control-plane sees only `product`, `requestId`, and `units`. No database credentials are accepted.
+
 ## Commercial roadmap
 
-Free: local query/migration/plan analysis. Pro later: history, before/after comparisons, CI policies and advanced recommendations. Team later: shared policies and centralized reports. No billing or quota enforcement is implemented in 0.1.0; local-only free usage cannot provide a trustworthy paid quota. Hosted features are the proposed monetization boundary.
+Free: local query/migration/plan analysis. Pro later: history, before/after comparisons, CI policies and advanced recommendations. Team later: shared policies and centralized reports. Hosted quotas use the control-plane path above; local counters are not used for paid enforcement.
 
 ## Validation status
 

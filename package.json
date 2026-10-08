@@ -10,8 +10,9 @@
   "engines": {"node": ">=22.18.0"},
   "scripts": {
     "build": "tsc && node scripts/postbuild.mjs",
-    "test": "node --test test/core.test.ts",
+    "test": "node --test test/core.test.ts test/hosted.test.ts",
     "test:integration": "vitest run test/mcp.integration.test.ts",
+    "start:hosted": "node --env-file=.env dist/hosted.js",
     "check": "tsc --noEmit",
     "prepublishOnly": "npm run check && npm test && npm run build && npm run test:integration"
   },
