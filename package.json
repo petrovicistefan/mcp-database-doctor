@@ -2,6 +2,7 @@
   "name": "mcp-database-doctor",
   "version": "0.1.0",
   "description": "Offline PostgreSQL query, migration and EXPLAIN diagnostics for AI agents",
+  "mcpName": "io.github.petrovicistefan/mcp-database-doctor",
   "type": "module",
   "license": "MIT",
   "bin": {
@@ -50,6 +51,11 @@
     "sql",
     "database",
     "query-analysis",
-    "ai-agents"
+    "ai-agents",
+    "mcp-server",
+    "claude",
+    "cursor",
+    "codex",
+    "copilot"
   ]
 }

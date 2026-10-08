@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.petrovicistefan/mcp-database-doctor",
+  "title": "MCP Database Doctor",
+  "description": "Offline PostgreSQL query, migration and EXPLAIN diagnostics for AI agents.",
+  "websiteUrl": "https://github.com/petrovicistefan/mcp-database-doctor#readme",
+  "repository": {
+    "url": "https://github.com/petrovicistefan/mcp-database-doctor",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "mcp-database-doctor",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

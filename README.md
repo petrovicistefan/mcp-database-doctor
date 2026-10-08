@@ -4,6 +4,71 @@ Offline PostgreSQL diagnostics for AI coding agents. Review SQL, risky migration
 
 **Status: 0.1.0 MVP.** Static rules are heuristic: `no_rules_triggered` does not mean safe, performant or valid PostgreSQL. No telemetry, remote analysis, credentials or automatic fixes.
 
+## Install in your AI client
+
+Works with any MCP client over stdio; no account or API key needed for the local server.
+
+**Claude Code**
+
+```sh
+claude mcp add database-doctor -- npx -y mcp-database-doctor
+```
+
+**Codex CLI**
+
+```sh
+codex mcp add database-doctor -- npx -y mcp-database-doctor
+```
+
+**Claude Desktop, Cursor, Windsurf, Cline, Gemini CLI** — add to the client's MCP config (`claude_desktop_config.json`, `~/.cursor/mcp.json`, `~/.codeium/windsurf/mcp_config.json`, Cline MCP settings, `~/.gemini/settings.json`):
+
+```json
+{
+  "mcpServers": {
+    "database-doctor": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-database-doctor"
+      ]
+    }
+  }
+}
+```
+
+**VS Code / GitHub Copilot** — `.vscode/mcp.json`:
+
+```json
+{
+  "servers": {
+    "database-doctor": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-database-doctor"
+      ]
+    }
+  }
+}
+```
+
+**Zed** — `settings.json`:
+
+```json
+{
+  "context_servers": {
+    "database-doctor": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-database-doctor"
+      ]
+    }
+  }
+}
+```
+
 ## Tools
 
 | Tool | Input | Output |
