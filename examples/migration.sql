@@ -1,0 +1,4 @@
+BEGIN;
+CREATE INDEX CONCURRENTLY ON users(email);
+ALTER TABLE users DROP COLUMN legacy_email;
+COMMIT;
