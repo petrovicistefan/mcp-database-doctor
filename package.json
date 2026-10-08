@@ -1,6 +1,6 @@
 {
   "name": "mcp-database-doctor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Offline PostgreSQL query, migration and EXPLAIN diagnostics for AI agents",
   "mcpName": "io.github.petrovicistefan/mcp-database-doctor",
   "type": "module",

@@ -4,7 +4,7 @@ import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 import { z } from 'zod';
 import { analyzeQuery, checkMigration, suggestIndexes, explainPlan, healthReport } from './doctor.js';
 export function createServer() {
- const server=new McpServer({name:'mcp-database-doctor',version:'0.1.0'});
+ const server=new McpServer({name:'mcp-database-doctor',version:'0.1.1'});
  const sql=z.string().trim().min(1).max(100000);
  const annotations={readOnlyHint:true,destructiveHint:false,idempotentHint:true,openWorldHint:false};
  const wrap=(fn:()=>unknown)=>{try{const output=fn() as Record<string,unknown>;return {content:[{type:'text' as const,text:JSON.stringify(output)}],structuredContent:output};}catch(error){return {isError:true,content:[{type:'text' as const,text:error instanceof Error?error.message:'Analysis failed.'}]};}};
