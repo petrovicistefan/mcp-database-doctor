@@ -2,7 +2,7 @@
 
 Offline PostgreSQL diagnostics for AI coding agents. Review SQL, risky migrations, candidate indexes and supplied EXPLAIN JSON plans without database credentials or executing statements.
 
-**Status: 0.1.0 MVP / not published to npm.** Static rules are heuristic: `no_rules_triggered` does not mean safe, performant or valid PostgreSQL. No telemetry, remote analysis, credentials or automatic fixes.
+**Status: 0.1.0 MVP.** Static rules are heuristic: `no_rules_triggered` does not mean safe, performant or valid PostgreSQL. No telemetry, remote analysis, credentials or automatic fixes.
 
 ## Tools
 
@@ -52,7 +52,7 @@ Claude Code CLI alternative:
 claude mcp add database-doctor -- node /absolute/path/mcp-database-doctor/dist/server.js
 ```
 
-After npm publication the expected launch command is `npx -y mcp-database-doctor`; do not use it before publication. Check npm name availability before releasing.
+Launch with `npx -y mcp-database-doctor`.
 
 Suggested agent instruction: "Before proposing database changes, call check_migration. Review slow queries with analyze_query and supplied EXPLAIN JSON. Treat index DDL as candidates requiring workload validation."
 
