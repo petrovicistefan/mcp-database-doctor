@@ -177,3 +177,11 @@ Free: local query/migration/plan analysis. Pro later: history, before/after comp
 - https://www.postgresql.org/docs/current/using-explain.html
 
 MIT license.
+
+---
+
+## ⭐ Support this project
+
+**Found this MCP useful? [Star this repository](https://github.com/petrovicistefan/mcp-database-doctor)!**
+
+A GitHub star helps other developers discover the project and lets you save it for later. Thanks for supporting open source!
