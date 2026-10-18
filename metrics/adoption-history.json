@@ -243,5 +243,54 @@
         "publishedAt": "2026-10-08T20:20:03Z"
       }
     }
+  },
+  {
+    "date": "2026-10-18",
+    "npm": {
+      "downloads24h": 11,
+      "downloads7d": 67,
+      "version": "0.1.1",
+      "publishedAt": "2026-10-08T20:19:34.300Z"
+    },
+    "github": {
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "openPullRequests": 0,
+      "contributors": 2,
+      "contributorsMayBeTruncated": false,
+      "recentCommits": [
+        {
+          "sha": "ac77d207fd805f1a037c416b1c05c7855923edf9",
+          "date": "2026-10-17T11:38:27Z",
+          "message": "chore(metrics): record daily adoption snapshot"
+        },
+        {
+          "sha": "2db16d69b9ac575f9450b3822bde45659d6e6967",
+          "date": "2026-10-16T12:27:37Z",
+          "message": "chore(metrics): record daily adoption snapshot"
+        },
+        {
+          "sha": "70e480075e47dec4c62a44d77035435a7d9cd6e2",
+          "date": "2026-10-15T12:40:38Z",
+          "message": "chore(metrics): record daily adoption snapshot"
+        },
+        {
+          "sha": "d9ea0b794d8b4965cdc49bc4e47fa13313dd628b",
+          "date": "2026-10-14T12:54:00Z",
+          "message": "chore(metrics): record daily adoption snapshot"
+        },
+        {
+          "sha": "dc5dca4b34d462a8d015947ccbe555905754c6a5",
+          "date": "2026-10-13T15:04:20Z",
+          "message": "docs: invite users to star and bookmark the project"
+        }
+      ],
+      "latestRelease": {
+        "tag": "v0.1.1",
+        "publishedAt": "2026-10-08T20:20:03Z"
+      }
+    }
   }
 ]
