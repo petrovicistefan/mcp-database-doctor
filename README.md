@@ -7,23 +7,18 @@ Offline PostgreSQL migration linting and query analysis for AI coding agents. De
 [![npm version](https://img.shields.io/npm/v/mcp-database-doctor?color=blue)](https://www.npmjs.com/package/mcp-database-doctor)
 [![npm downloads](https://img.shields.io/npm/dm/mcp-database-doctor)](https://www.npmjs.com/package/mcp-database-doctor)
 [![CI status](https://github.com/petrovicistefan/mcp-database-doctor/actions/workflows/ci.yml/badge.svg)](https://github.com/petrovicistefan/mcp-database-doctor/actions/workflows/ci.yml)
+[![Glama](https://glama.ai/mcp/servers/petrovicistefan/mcp-database-doctor/badge)](https://glama.ai/mcp/servers/petrovicistefan/mcp-database-doctor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
-## ⚡ Quickstart
+## Quick Install
 
-### Any MCP Client (one command, no install)
+### Cursor
 
-**Claude Code:**
+[![Add to Cursor](https://img.shields.io/badge/Add%20to-Cursor-00A67E?style=for-the-badge&logo=cursor&logoColor=white)](https://cursor.com/mcp-install?name=database-doctor&config=eyJtY3BTZXJ2ZXJzIjp7ImRhdGFiYXNlLWRvY3RvciI6eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIm1jcC1kYXRhYmFzZS1kb2N0b3IiXX19fQ%3D%3D)
 
-```bash
-claude mcp add database-doctor -- npx -y mcp-database-doctor
-```
-
-**Cursor, Claude Desktop, Windsurf, Cline, VS Code:**
-
-Add to your MCP config (`~/.cursor/mcp.json`, `claude_desktop_config.json`, etc.):
+Click the button above to install in one step, or add manually to `~/.cursor/mcp.json`:
 
 ```json
 {
@@ -36,23 +31,61 @@ Add to your MCP config (`~/.cursor/mcp.json`, `claude_desktop_config.json`, etc.
 }
 ```
 
-### Command Line
+### Claude Code
 
 ```bash
-# Check a migration file directly (coming soon)
-npx mcp-database-doctor check migration.sql
+claude mcp add database-doctor -- npx -y mcp-database-doctor
+```
 
-# Use via MCP in your AI client - just ask:
-# "Check this migration for dangerous patterns"
-# "Review this query for performance issues"
+Or, if available in the Cursor plugin marketplace:
+
+```bash
+/plugin marketplace add petrovicistefan/mcp-marketplace
+```
+
+### Claude Desktop
+
+Add to `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "database-doctor": {
+      "command": "npx",
+      "args": ["-y", "mcp-database-doctor"]
+    }
+  }
+}
+```
+
+### VS Code
+
+[![Install in VS Code](https://img.shields.io/badge/Install%20in-VS%20Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white)](vscode:extension/vscode.mcp?config=eyJtY3BTZXJ2ZXJzIjp7ImRhdGFiYXNlLWRvY3RvciI6eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIm1jcC1kYXRhYmFzZS1kb2N0b3IiXX19fQ==)
+
+Or add to `.vscode/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "database-doctor": {
+      "command": "npx",
+      "args": ["-y", "mcp-database-doctor"]
+    }
+  }
+}
+```
+
+### Any MCP Client
+
+```bash
+npx -y mcp-database-doctor
 ```
 
 **⭐ Star this repository to support the project and stay updated!** → [Give a star](https://github.com/petrovicistefan/mcp-database-doctor)
 
 ---
 
-<!-- TODO: Add demo GIF here once generated from docs/demo.tape using VHS -->
-<!-- ![Demo: Database Doctor catching a dangerous migration](docs/demo.gif) -->
+![Demo: Database Doctor catching a dangerous migration](docs/demo.gif)
 
 ## 📋 Table of Contents
 
