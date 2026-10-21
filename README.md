@@ -63,7 +63,7 @@ Add to `claude_desktop_config.json`:
 
 ### VS Code
 
-[![Install in VS Code](https://img.shields.io/badge/Install%20in-VS%20Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white)](vscode:extension/vscode.mcp?config=eyJtY3BTZXJ2ZXJzIjp7ImRhdGFiYXNlLWRvY3RvciI6eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIm1jcC1kYXRhYmFzZS1kb2N0b3IiXX19fQ==)
+[![Install in VS Code](https://img.shields.io/badge/Install%20in-VS%20Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=database-doctor&config=%7B%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22mcp-database-doctor%22%5D%7D)
 
 Or add to `.vscode/mcp.json`:
 
