@@ -16,9 +16,12 @@ Offline PostgreSQL migration linting and query analysis for AI coding agents. De
 
 ### Cursor
 
-[![Add to Cursor](https://img.shields.io/badge/Add%20to-Cursor-00A67E?style=for-the-badge&logo=cursor&logoColor=white)](https://cursor.com/mcp-install?name=database-doctor&config=eyJtY3BTZXJ2ZXJzIjp7ImRhdGFiYXNlLWRvY3RvciI6eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIm1jcC1kYXRhYmFzZS1kb2N0b3IiXX19fQ%3D%3D)
+[![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=database-doctor&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIm1jcC1kYXRhYmFzZS1kb2N0b3IiXX0=)
 
-Click the button above to install in one step, or add manually to `~/.cursor/mcp.json`:
+Click the button above to install in one step, or use this link:  
+`cursor://anysphere.cursor-deeplink/mcp/install?name=database-doctor&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIm1jcC1kYXRhYmFzZS1kb2N0b3IiXX0=`
+
+Or add manually to `~/.cursor/mcp.json`:
 
 ```json
 {
