@@ -390,5 +390,54 @@
         "publishedAt": "2026-10-19T11:12:27Z"
       }
     }
+  },
+  {
+    "date": "2026-10-21",
+    "npm": {
+      "downloads24h": 10,
+      "downloads7d": 33,
+      "version": "0.1.2",
+      "publishedAt": "2026-10-19T11:12:10.056Z"
+    },
+    "github": {
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "openPullRequests": 0,
+      "contributors": 4,
+      "contributorsMayBeTruncated": false,
+      "recentCommits": [
+        {
+          "sha": "d8f4347c8e78326fdb9471213b64b83e88ad6725",
+          "date": "2026-10-21T07:40:25Z",
+          "message": "Enhance MCP server discoverability for AI agents and directories (#2)"
+        },
+        {
+          "sha": "8a33a5d102cabdb3f2808a40457f3b53903dea1f",
+          "date": "2026-10-20T12:44:29Z",
+          "message": "chore(metrics): record daily adoption snapshot"
+        },
+        {
+          "sha": "c3900a7409ae06ac2a08c8164b8f0c97c97e8923",
+          "date": "2026-10-19T14:41:57Z",
+          "message": "chore(metrics): record daily adoption snapshot"
+        },
+        {
+          "sha": "59e79e0f035b60591cf7b79bbb22770caf9551a2",
+          "date": "2026-10-19T11:05:42Z",
+          "message": "Merge pull request #1 from petrovicistefan/cursor/readme-rewrite-0.1.2-e2ac"
+        },
+        {
+          "sha": "74d6a083660562122add54a0bdf4474ad8ad457e",
+          "date": "2026-10-19T11:03:15Z",
+          "message": "docs: rewrite README and bump to v0.1.2"
+        }
+      ],
+      "latestRelease": {
+        "tag": "v0.1.2",
+        "publishedAt": "2026-10-19T11:12:27Z"
+      }
+    }
   }
 ]
