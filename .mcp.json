@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "database-doctor": {
+      "command": "npx",
+      "args": ["-y", "mcp-database-doctor"]
+    }
+  }
+}
