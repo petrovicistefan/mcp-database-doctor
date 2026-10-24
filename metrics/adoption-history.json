@@ -537,5 +537,54 @@
         "publishedAt": "2026-10-19T11:12:27Z"
       }
     }
+  },
+  {
+    "date": "2026-10-24",
+    "npm": {
+      "downloads24h": 14,
+      "downloads7d": 44,
+      "version": "0.1.2",
+      "publishedAt": "2026-10-19T11:12:10.056Z"
+    },
+    "github": {
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "openPullRequests": 0,
+      "contributors": 4,
+      "contributorsMayBeTruncated": false,
+      "recentCommits": [
+        {
+          "sha": "e0f3a8b978f02e4a40754e9165ff6d590ae19439",
+          "date": "2026-10-23T12:38:31Z",
+          "message": "chore(metrics): record daily adoption snapshot"
+        },
+        {
+          "sha": "72339a181b3dd0acdcf55819247473eb3cce2277",
+          "date": "2026-10-22T12:59:19Z",
+          "message": "chore(metrics): record daily adoption snapshot"
+        },
+        {
+          "sha": "49e7519a0737c7b0807b341e07c4260b54efca1d",
+          "date": "2026-10-21T12:57:19Z",
+          "message": "chore(metrics): record daily adoption snapshot"
+        },
+        {
+          "sha": "d8f4347c8e78326fdb9471213b64b83e88ad6725",
+          "date": "2026-10-21T07:40:25Z",
+          "message": "Enhance MCP server discoverability for AI agents and directories (#2)"
+        },
+        {
+          "sha": "8a33a5d102cabdb3f2808a40457f3b53903dea1f",
+          "date": "2026-10-20T12:44:29Z",
+          "message": "chore(metrics): record daily adoption snapshot"
+        }
+      ],
+      "latestRelease": {
+        "tag": "v0.1.2",
+        "publishedAt": "2026-10-19T11:12:27Z"
+      }
+    }
   }
 ]
