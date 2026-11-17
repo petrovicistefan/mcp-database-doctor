@@ -1,6 +1,6 @@
-# Changelog
-
 ## Unreleased
+
+## 0.1.3
 
 - `serverInfo.version` now comes from `package.json` through `src/version.ts` instead of a string literal.
 - Added `scripts/check-rules.mjs` (`npm run check:rules`): fails on `package.json`/`server.json` version drift, hardcoded version literals, network use outside the hosted path, telemetry references, and logging of possibly sensitive data.
