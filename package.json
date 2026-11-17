@@ -21,11 +21,12 @@
   },
   "scripts": {
     "build": "tsc && node scripts/postbuild.mjs",
-    "test": "node --test test/core.test.ts test/hosted.test.ts",
+    "test": "node --test test/core.test.ts test/hosted.test.ts test/version.test.ts",
     "test:integration": "vitest run test/mcp.integration.test.ts",
     "start:hosted": "node --env-file=.env dist/hosted.js",
     "check": "tsc --noEmit",
-    "prepublishOnly": "npm run check && npm test && npm run build && npm run test:integration"
+    "prepublishOnly": "npm run check && npm run check:rules && npm test && npm run build && npm run test:integration",
+    "check:rules": "node scripts/check-rules.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.26.0",

@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+- `serverInfo.version` now comes from `package.json` through `src/version.ts` instead of a string literal.
+- Added `scripts/check-rules.mjs` (`npm run check:rules`): fails on `package.json`/`server.json` version drift, hardcoded version literals, network use outside the hosted path, telemetry references, and logging of possibly sensitive data.
+- Added `test/version.test.ts` (package.json == server.json == runtime version); the stdio integration test also asserts the reported server version.
+- `prepublishOnly` now runs `check:rules`.
+- Added `AGENTS.md` and `docs/PRODUCT.md`.
+
 ## 0.1.2 (2026-10-19)
 
 - **Documentation-only patch release**: README rewritten for GitHub discoverability, conversions and stars
