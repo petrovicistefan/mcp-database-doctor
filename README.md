@@ -1,14 +1,16 @@
 # MCP Database Doctor
 
-**Catch dangerous PostgreSQL migrations and slow queries before your AI agent ships them — offline, no DB credentials.**
+**MCP server for PostgreSQL migration linting, SQL query analysis and EXPLAIN plan review — catch dangerous migrations and slow queries before your AI agent ships them. Offline, no DB credentials.**
 
-Offline PostgreSQL migration linting and query analysis for AI coding agents. Detects table-locking DDL, dangerous type changes, slow query patterns, and execution plan issues before they reach production. Nothing leaves your machine, no database connection required.
+MCP Database Doctor gives Claude Code, Cursor, Codex and GitHub Copilot three PostgreSQL tools: `check_migration` flags table-locking DDL and risky type changes, `analyze_query` finds slow query patterns and missing-index candidates, and `explain_plan` reads `EXPLAIN` output for sequential scans and row-estimate errors. Nothing leaves your machine and no database connection is required.
 
 [![npm version](https://img.shields.io/npm/v/mcp-database-doctor?color=blue)](https://www.npmjs.com/package/mcp-database-doctor)
 [![npm downloads](https://img.shields.io/npm/dm/mcp-database-doctor)](https://www.npmjs.com/package/mcp-database-doctor)
 [![CI status](https://github.com/petrovicistefan/mcp-database-doctor/actions/workflows/ci.yml/badge.svg)](https://github.com/petrovicistefan/mcp-database-doctor/actions/workflows/ci.yml)
 [![Glama](https://glama.ai/mcp/servers/petrovicistefan/mcp-database-doctor/badge)](https://glama.ai/mcp/servers/petrovicistefan/mcp-database-doctor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+> **Part of the [petrovicistefan MCP suite](https://github.com/petrovicistefan/mcp-marketplace)** — local-first guardrails for AI coding agents (Claude Code, Cursor, Codex).
 
 ---
 
